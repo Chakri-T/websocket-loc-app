@@ -1,5 +1,5 @@
 import { CssBaseline, Typography } from "@mui/material";
-import "./App.css";
+
 import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
 import Location from "./components/location";

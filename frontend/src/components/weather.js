@@ -57,7 +57,7 @@ const Weather = (props) => {
                   display: "flex",
                   flexDirection: "column",
                   textAlign: "center",
-                  px: 3,
+                  px: 1,
                   py: 7,
                   mx: "auto",
                 }}
