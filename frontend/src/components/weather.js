@@ -24,7 +24,13 @@ const Weather = (props) => {
   return (
     <div>
       {weatherData && (
-        <Card sx={{ mx: "auto", mt: 3 }}>
+        <Card
+          sx={{
+            mx: "0px",
+            px: 2,
+            mt: 10,
+          }}
+        >
           <Grid2 container size={{ xs: 12 }} sx={{ mt: 4 }}>
             <Grid2 size={{ xs: 12, md: 6 }}>
               <Box

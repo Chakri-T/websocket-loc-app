@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import { Grid2, Card, CardContent, CircularProgress } from "@mui/material";
 
 import { useEffect, useState, Suspense, lazy } from "react";
+import Btn from "./btn";
 
 const Map = lazy(() => import("./map"));
 const Weather = lazy(() => import("./weather"));
@@ -32,8 +33,8 @@ const Location = () => {
   console.log(path);
   return (
     <Box>
-      <Box sx={{ mt: 8 }}>
-        <Grid2 container spacing={2}>
+      <Box sx={{ mx: 0, mt: 6, p: 0, width: "100%" }}>
+        <Grid2 container spacing={4}>
           <Grid2 size={{ xs: 12, sm: 7 }}>
             <Card>
               <CardContent>
@@ -73,6 +74,16 @@ const Location = () => {
             </Suspense>
           </Grid2>
         </Grid2>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          mt: 4,
+          flexDirection: "column",
+        }}
+      >
+        <Btn />
       </Box>
     </Box>
   );
