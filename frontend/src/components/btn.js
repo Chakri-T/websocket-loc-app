@@ -85,7 +85,7 @@ const Btn = () => {
               clearInterval(interval);
             }
           }
-        }, 2500);
+        }, 3000);
       } catch (error) {
         console.log("Error at simulator: ", error);
       }

@@ -1,9 +1,12 @@
 import { Grid2, Card, Typography, Box } from "@mui/material";
 import { useEffect, useState } from "react";
 import axios from "axios";
+
 const Weather = (props) => {
   const { lat, lon } = props.coords;
   const [weatherData, setWeatherData] = useState(null);
+  //const [co2Data, setCo2Data] = useState(450);
+  //const [currentIndex, setCurrentIndex] = useState(0);
   const API_key = "de3bff2d6d718bb79bda5653e997946a";
 
   useEffect(() => {
@@ -17,7 +20,10 @@ const Weather = (props) => {
         console.log("Error fetching weather data", error);
       }
     };
+
     getWeather();
+
+    // getCo2Data();
   }, [lat, lon]);
 
   // weatherData && console.log(weatherData);
@@ -28,14 +34,18 @@ const Weather = (props) => {
           sx={{
             mx: "0px",
             px: 2,
-            mt: 10,
+            mb: 2,
+            borderRadius: 5,
           }}
+          className="card weatherCard"
         >
           <Grid2 container size={{ xs: 12 }} sx={{ mt: 4 }}>
             <Grid2 size={{ xs: 12, md: 6 }}>
               <Box
                 sx={{
                   px: 3,
+                  pb: 2,
+
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -64,14 +74,14 @@ const Weather = (props) => {
                   flexDirection: "column",
                   textAlign: "center",
                   px: 1,
-                  py: 7,
+                  mt: 5,
                   mx: "auto",
                 }}
               >
                 <Typography variant="h4">
                   {weatherData.weather[0].description.toUpperCase()}{" "}
                 </Typography>
-
+                <br />
                 <Typography>
                   Feels like: {weatherData.main.feels_like}
                 </Typography>

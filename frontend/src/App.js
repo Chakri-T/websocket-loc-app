@@ -4,6 +4,7 @@ import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
 import Location from "./components/location";
 import "leaflet/dist/leaflet.css";
+import "./styles/allStyles.css";
 function App() {
   return (
     <div className="App">

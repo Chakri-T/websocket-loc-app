@@ -1,0 +1,14 @@
+.gauge-meter {
+  background: linear-gradient(135deg, #2a2d34, #1b1e24);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 15px;
+
+  padding: 0px;
+}
+
+.gauge-chart:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
